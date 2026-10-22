@@ -1,0 +1,65 @@
+﻿@model POOI_EF_AGUIRRE_COVEÑAS.Models.Consumidor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar consumidor</h2>
+
+<div>
+    <h4>Consumidor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dnicont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dnicont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nomcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nomcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apecont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apecont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emailcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emailcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nompais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idpais)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Dnicont)
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar al índice principal", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,57 @@
+﻿@model POOI_EF_AGUIRRE_COVEÑAS.Models.Consumidor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles del consumidor</h2>
+
+<div>
+    <h4>Consumidor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dnicont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dnicont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nomcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nomcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apecont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apecont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emailcont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emailcont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idpais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idpais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Regresar al índice principal", "Index")
+</p>

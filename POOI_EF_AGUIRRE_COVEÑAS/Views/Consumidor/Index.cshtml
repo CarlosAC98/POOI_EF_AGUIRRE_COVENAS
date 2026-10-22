@@ -1,0 +1,57 @@
+﻿@model IEnumerable<POOI_EF_AGUIRRE_COVEÑAS.Models.Consumidor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Índice</h2>
+
+<p>
+    @Html.ActionLink("Agregar nuevo consumidor", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dnicont)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nomcont)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apecont)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emailcont)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idpais)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dnicont)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nomcont)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apecont)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emailcont)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nompais)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Update", new { id = item.Dnicont }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.Dnicont }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.Dnicont })
+        </td>
+    </tr>
+}
+
+</table>
